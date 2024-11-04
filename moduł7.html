@@ -1,0 +1,57 @@
+<ul id="categories">
+    <li class="item">
+    <h2>Animals</h2>
+    <ul>
+        <li>Cat</li>
+        <li>Hamster</li>
+        <li>Horse</li>
+        <li>Parrot</li>
+    </ul>
+    </li>
+    <li class="item">
+    <h2>Products</h2>
+    <ul>
+        <li>Bread</li>
+        <li>Prasley</li>
+        <li>Cheese</li>
+    </ul>
+    </li>
+    <li class="item">
+    <h2>Technologies</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+    </ul>
+    </li>
+</ul>  
+
+<script>
+
+    let categories = document.querySelectorAll('h2')
+    console.log(`Number of categories: ${categories.length}`)
+    console.log(' ')
+
+    categories.forEach(cat =>{
+        console.log(`Category: ${cat.innerText}`)
+
+        let cat_num = cat.parentElement.querySelectorAll('ul > li')
+        console.log(`Elements: ${cat_num.length}`)
+        console.log(' ')
+
+    })
+    /*
+let ul_cats = document.querySelectorAll("li.item")
+console.log(`Number of categories: ${ul_cats.length}`)
+console.log(" ")
+ul_cats.forEach(el => {
+    let header = el.querySelector('h2')
+    console.log(`Category: ${header.innerText}`)
+    
+    let elements = header.querySelectorAll('h2 + li.item > ul li')
+    console.log(elements)
+  }) 
+*/
+</script>
